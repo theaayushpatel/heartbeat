@@ -1,0 +1,30 @@
+{
+  "name": "heartbeat-protocol",
+  "version": "1.0.0",
+  "description": "Autonomous AI-powered DeFi vital defense system",
+  "private": true,
+  "workspaces": [
+    "cre-workflow",
+    "dashboard"
+  ],
+  "scripts": {
+    "install:all": "npm install && cd cre-workflow && npm install && cd ../dashboard && npm install",
+    "dev:dashboard": "cd dashboard && npm run dev",
+    "build:contracts": "cd contracts && forge build",
+    "test:contracts": "cd contracts && forge test",
+    "deploy:contracts": "forge script contracts/script/Deploy.s.sol --rpc-url arbitrum-sepolia --broadcast --legacy",
+    "setup:foundry": "cd contracts && forge install OpenZeppelin/openzeppelin-contracts && forge install foundry-rs/forge-std"
+  },
+  "keywords": [
+    "defi",
+    "security",
+    "vital-monitoring",
+    "anomaly-detection",
+    "ai",
+    "chainlink",
+    "ethereum",
+    "heartbeat"
+  ],
+  "author": "Heartbeat Protocol",
+  "license": "MIT"
+}
