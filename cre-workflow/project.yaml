@@ -1,0 +1,11 @@
+project-name: "heartbeat-protocol"
+
+local-simulation:
+  rpcs:
+    - chain-name: ethereum-testnet-sepolia-arbitrum-1
+      url: https://arb-sepolia.g.alchemy.com/v2/0s6zJM56Vbjn0n2d-s48o
+
+production-testnet:
+  rpcs:
+    - chain-name: ethereum-testnet-sepolia-arbitrum-1
+      url: https://arb-sepolia.g.alchemy.com/v2/0s6zJM56Vbjn0n2d-s48o

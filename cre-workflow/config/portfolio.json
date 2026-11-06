@@ -1,0 +1,51 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "portfolios": [
+    {
+      "daoName": "Example DAO",
+      "daoAddress": "0x21938d5fACb257D7314859c8A98EA58fD27e70Fa",
+      "protocols": [
+        {
+          "name": "Arrhythmic Vault",
+          "address": "0x642f1bd9490C2A87C8Cd891E8E2F5EcB8cC03D45",
+          "chain": "arbitrum-sepolia",
+          "tvl": "1000000",
+          "criticality": "high",
+          "withdrawalAddress": "0x505a0beAd3b7782B5e3A7063Cc28eAB1597bA389"
+        }
+      ]
+    }
+  ],
+  "riskThresholds": {
+    "critical": {
+      "min": 9,
+      "max": 10,
+      "action": "emergency_withdraw",
+      "withdrawalPercent": 100
+    },
+    "high": {
+      "min": 7,
+      "max": 8,
+      "action": "partial_withdraw",
+      "withdrawalPercent": 80
+    },
+    "medium": {
+      "min": 5,
+      "max": 6,
+      "action": "alert_governance",
+      "withdrawalPercent": 0
+    },
+    "low": {
+      "min": 3,
+      "max": 4,
+      "action": "enhanced_monitoring",
+      "withdrawalPercent": 0
+    }
+  },
+  "scanConfig": {
+    "similarityThreshold": 0.7,
+    "confidenceThreshold": 0.8,
+    "cooldownPeriod": 300,
+    "maxRetries": 3
+  }
+}

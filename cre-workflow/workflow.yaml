@@ -1,0 +1,26 @@
+# ==========================================================================
+# CRE WORKFLOW SETTINGS — Heartbeat Protocol
+# ==========================================================================
+# Used by: cre workflow simulate . --trigger-index 0 --broadcast
+# Ref: https://docs.chain.link/cre
+# ==========================================================================
+
+local-simulation:
+  user-workflow:
+    workflow-owner-address: "0x21938d5fACb257D7314859c8A98EA58fD27e70Fa"
+    workflow-name: "heartbeat-vital-monitor"
+  workflow-artifacts:
+    workflow-path: "./index.ts"
+    config-path: "./cre-config.json"
+
+# ==========================================================================
+# Production testnet deployment (requires cre account access)
+# cre workflow deploy . --target production-testnet
+# ==========================================================================
+production-testnet:
+  user-workflow:
+    workflow-owner-address: "0x21938d5fACb257D7314859c8A98EA58fD27e70Fa"
+    workflow-name: "heartbeat-vital-monitor"
+  workflow-artifacts:
+    workflow-path: "./index.ts"
+    config-path: "./cre-config.json"
